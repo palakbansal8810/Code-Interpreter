@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 3. Configure API keys:
 
-Replace the `API_KEY` variable in the `api.py` file with your Google GenerativeAI API key.
+Replace the `YOUR_API_KEY` variable in the `.env` file with your Google GenerativeAI API key.
 
 ## Usage
 
