@@ -7,10 +7,14 @@ import json
 import os 
 import sys
 from io import StringIO
-
-from api import API_KEY  # Import your API_KEY from the appropriate location
+from dotenv import load_dotenv
+# Import your API_KEY from the appropriate location
 
 # To extract text from response generated
+def configure():
+    load_dotenv()
+
+
 def extract_text_from_response(response):
     try:
         candidates = response.candidates
@@ -22,8 +26,6 @@ def extract_text_from_response(response):
     except Exception as e:
         return f"error: {str(e)}"
 
-
-genai.configure(api_key=API_KEY)
 
 # To generate the response
 # I am using genai API to generate response because my OpenAI API limit is reached
@@ -102,10 +104,17 @@ def response_handling(file_path, user_prompt):
     except Exception as e:
         return str(e)
 
-file_path = input("Enter File -\n(For eg: samples/Palak Bansal IC.pdf, samples/Admission_Predict.csv)\n\n")
-user_prompt = input("Enter Prompt-\n(For eg: Tell me about this project in detail)\n\n")
-result = response_handling(file_path, user_prompt)
+def main():
+    configure()
+    genai.configure(api_key=os.getenv('API_KEY'))
 
-# Print the result as needed
-print(result)
+    file_path = input("Enter File -\n(For eg: samples/Palak Bansal IC.pdf, samples/Admission_Predict.csv)\n\n")
+    user_prompt = input("Enter Prompt-\n(For eg: Tell me about this project in detail)\n\n")
+    result = response_handling(file_path, user_prompt)
 
+    # Print the result as needed
+    print(result)
+
+if __name__=='__main__':
+    
+    main()
