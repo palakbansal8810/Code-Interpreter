@@ -5,7 +5,7 @@ This project is a Python code interpreter that takes various file formats (PDF, 
 ## Installation
 
 1. Clone the repository:
-!git clone https://github.com/palakbansal8810/Code-Interpreter.git 
+git clone https://github.com/palakbansal8810/Code-Interpreter.git 
 
 2. Install dependencies:
 pip install -r requirements.txt
@@ -17,6 +17,7 @@ Replace the `YOUR_API_KEY` variable in the `.env` file with your Google Generati
 ## Usage
 
 Run the code interpreter:
+cd Code-Interpreter
 python main.py
 
 Follow the prompts to input the file path, and user prompt.
