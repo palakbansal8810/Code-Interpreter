@@ -18,6 +18,7 @@ Replace the `YOUR_API_KEY` variable in the `.env` file with your Google Generati
 
 Run the code interpreter:
 cd Code-Interpreter
+
 python main.py
 
 Follow the prompts to input the file path, and user prompt.
