@@ -1,6 +1,6 @@
 # Code-Interpreter
 
-This project is a Python code interpreter that takes various file formats (PDF, XLSX, CSV, DOCX) as input, reads the content, generates Python code using the genai API (I didn't use openAI api because its limit is reached), executes the generated code, and returns the result to the user.
+This project is a Python code interpreter that takes various file formats (PDF, XLSX, CSV, DOCX) as input, reads the content, generates Python code using the genai API, executes the generated code, and returns the result to the user.
 
 ## Installation
 
